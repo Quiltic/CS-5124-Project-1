@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>D3 Project Starter Template</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>    
+    <!-- Run this file through server creation in VS-Code -->
+    <div id="tooltip"></div>
+
+    <div class="header">
+        <h1 style="background-color: #b7b7b7; font-size: 30px">Exoplanet Data Graphs</h1>
+        <p>By Josh Zack</p>
+        <p>Sourced from NASA Exoplanet Archive:  <a href="https://exoplanetarchive.ipac.caltech.edu" target="_blank">https://exoplanetarchive.ipac.caltech.edu</a>/</p>
+      </div>
+    
+
+    <div style="display: flex; flex-direction: column;"> 
+        <div class="section">
+            <div class="graph">
+                <div class="topbar">
+                    <h1>
+                        Stars in System by Star Count
+                    </h1>
+                    <!-- <a href="http://en.wikipedia.org/wiki/Stellar_classification">Wiki on Stellar Classification</a> -->
+                    <p>Shows the number of Stars in a Exoplanet's Solar System.</p>
+                </div>
+                <svg id="starbar"></svg>
+            </div>
+
+            <div class="graph">
+                <div class="topbar">
+                    <h1>
+                        Planets in System by Count
+                    </h1>
+                    <!-- <a href="http://en.wikipedia.org/wiki/Stellar_classification">Wiki on Stellar Classification</a> -->
+                    <p>Similar to our own system other Systems can have multiple planets as well.</p>
+                </div>
+                
+                <svg id="planetbar"></svg>
+            </div>
+
+            <div class="graph">
+                <div class="topbar">
+                    <h1>
+                        Types of Stars in System by Count
+                    </h1>
+                    <a href="http://en.wikipedia.org/wiki/Stellar_classification" target="_blank">Wiki on Stellar Classification.</a>
+                </div>
+                <svg id="startypebar"></svg>
+            </div>
+            <div class="graph">
+                <div class="topbar">
+                    <h1>
+                        Discovery Methods by Count
+                    </h1>
+                    <a href="https://en.wikipedia.org/wiki/Methods_of_detecting_exoplanets">Wiki on Exoplanet Discovery Methods</a>
+                </div>
+                <p></p>
+                <svg id="dicoverbar"></svg>
+            </div>
+        </div>
+
+        <div class="section">
+            
+
+            <div class="graph">
+                <div class="topbar">
+                    <h1>
+                        Habbitability of Stars
+                    </h1>
+                    <a href="http://en.wikipedia.org/wiki/Habitable_zone" target="_blank">Wiki on Stellar Habbitability.</a>
+                </div>
+                
+                <svg id="habbitbar"></svg>
+
+                <div class="section" style="margin: auto;">
+                    <div class="bluesquare"></div>
+                    <p class="keywords">Habbitable</p>
+
+                    <div class="pinksquare"></div>
+                    <p class="keywords">Unhabbitable</p>
+
+                </div>
+            </div>
+
+            <div class="graph">
+                <div class="topbar">
+                    <h1>
+                        Distance from Earth
+                    </h1>
+                    <!-- <a href="http://en.wikipedia.org/wiki/Stellar_classification">Wiki on Stellar Classification</a> -->
+                    <p>Shows the number of Exoplanets and their distance from Earth</p>
+                </div>
+                <svg id="distancehist"></svg>
+            </div>
+
+
+            <div>
+
+                <div class="graphlong">
+                    <div class="topbarlong">
+                        <h1>
+                            Timeline of Exoplanet Discoveries
+                        </h1>
+                        <!-- <a href="http://en.wikipedia.org/wiki/Stellar_classification">Wiki on Stellar Classification</a> -->
+                        <!-- <p>Shows the number of Exoplanets Discovered vs Discovery Year.</p> -->
+                    </div>
+                    <svg id="timeline"></svg>
+                </div>
+            
+                <div class="graphlong">
+                    <div class="topbarlong">
+                        <h1>
+                            Planet Radius vs Mass
+                        </h1>
+                        <!-- <a href="http://en.wikipedia.org/wiki/Stellar_classification">Wiki on Stellar Classification</a> -->
+                        <!-- <p>Shows the Exoplanet Radius vs Mass colored by Distance.</p> -->
+                    </div>
+                    <svg id="scatterplot"></svg>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    
+    
+    
+    
+
+
+
+
+    <!-- D3 bundle -->
+    <script src="js/d3.v6.min.js"></script>
+
+    <!-- Our JS code - INCLUDING the new files-->
+    <script src="js/barchart.js"></script>  
+    <script src="js/dual_barchart.js"></script>  
+    <script src="js/linechart.js"></script> 
+    <script src="js/scatterplot.js"></script> 
+    <script src="js/histogram.js"></script> 
+
+    <script src="js/main.js"></script>
+    
+
+
+</body>
+</html>
